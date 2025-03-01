@@ -1,0 +1,62 @@
+!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Resume</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <h1>Shreya's Resume</h1>
+        <button id="logoutBtn">Logout</button>
+    </header>
+
+    <img src="images.jpg" alt="Profile Image" width="200">
+
+    <section class="resume">
+        <div class="card">
+            <h2>About Me</h2>
+            <p>Hello! I am Shreya, a passionate Front-End Developer.</p>
+        </div>
+
+        <div class="card">
+            <h2>Skills</h2>
+            <div class="chips">
+                <span class="chip">HTML</span>
+                <span class="chip">CSS</span>
+                <span class="chip">JavaScript</span>
+                <span class="chip">React.js</span>
+                <span class="chip">Angular</span>
+            </div>
+        </div>
+
+        <div class="card">
+            <h2>Education</h2>
+            <p>BCA - Final Year</p>
+        </div>
+
+        <div class="card">
+            <h2>Experience</h2>
+            <p>Internships & Projects in Web Development</p>
+        </div>
+    </section>
+
+    <footer>
+        <button id="fetchDog">Fetch My Dog Breed</button>
+        <div id="dogPopup" class="popup">
+            <span class="close">&times;</span>
+            <img id="dogImage"alt="Random Dog Image">
+        </div>
+    </footer>
+
+    <script>
+        //check if the user is logged in
+        if (localStorage.getItem("isLoggedIn")!=="true"){
+            window.location.href="login.html"; //redirect to login page
+        }
+    </script>
+    <script src="script.js"></script>
+</body>
+</html>
